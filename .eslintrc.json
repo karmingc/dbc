@@ -1,0 +1,23 @@
+{
+  "extends": ["react-app", "eslint:recommended", "airbnb", "prettier"],
+  "plugins": [
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": ["error"],
+    "newlines-between": "always", // spacing makes groups easier to parse
+    // alphabetic ordering makes stuff from same directories clump together
+    "alphabetize": {
+      "order": "asc"
+    }
+  },
+  "settings": {
+    "imports/resolver": {
+      "node": {
+        "paths": ["src"]
+      }
+    }
+  }
+}
