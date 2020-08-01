@@ -81,7 +81,7 @@ export default class About extends React.Component {
           <TextTitle>Mixture</TextTitle>
           <TextDescription>
             To add a twist of taste, there is a mixture of peanuts, coconuts,
-            sesames and slight touch of chocolate within the wrapped sugar
+            sesames and a slight touch of chocolate within the wrapped sugar
             strands.
           </TextDescription>
         </TextContainer>
