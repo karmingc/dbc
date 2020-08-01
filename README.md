@@ -1,4 +1,5 @@
-The website is currently built using React and deployed using Firebase. 
+The website was using React and deployed using Firebase. 
+<br/>
 *Last updated on August 1st, 2020*
 
 ## Official Dragon's Beard Candy website.
