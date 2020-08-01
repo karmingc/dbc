@@ -8,11 +8,10 @@ After designing it and building it using Weebly in my early teenage years, I fin
 
 ## Back to basics
 Redesigns are never easy - the most important notion is to understand what's the purpose of it all.
-Bearing that in mind, there were three things I wanted to incorporate: consistency, simplicity and intuitiveness. Rather than creating a design system that was overly complicated, it was important to keep in mind that converging my ideas into short and sweet elements could be as impactful as a jam-packed user interface. That being said, all three elements were to bring forth one feeling: **curiosity**.
-
-## Curiosity
-As the products in questions were quite unfamiliar to the average person, using on the scene pictures became the most obvious choice, and with each carefully selected picture, represented a specific moment of its creation. As for text, using Helvetica Neue as its base was due to its legibility: it was the perfect middle ground between all the different edges of feelings.
+Bearing that in mind, there were three things I wanted to incorporate: consistency, simplicity and intuitiveness. Rather than creating a design system that was overly complicated, it was important to keep in mind that converging my ideas into short and sweet elements could be as impactful as a jam-packed user interface. 
+With a combination of carefully selected pictures, positioning and choice of legible font, my goal was to bring forth one feeling: **curiosity**.
 
 ## Results
-![Alt Text](https://media.giphy.com/media/KbqXPGVr5TLIKxP2z4/giphy.gif)
-*For more, please check the website*
+https://www.dragonsbeardcandy.com
+
+*For more information, please free to message me directly*
