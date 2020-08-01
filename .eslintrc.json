@@ -1,23 +1,38 @@
 {
-  "extends": ["react-app", "eslint:recommended", "airbnb", "prettier"],
-  "plugins": [
-    "plugin:import/errors",
-    "plugin:import/warnings",
-    "prettier"
+  "extends": [
+    "airbnb",
+    "plugin:prettier/recommended",
+    "prettier",
+    "prettier/react"
   ],
-  "rules": {
-    "prettier/prettier": ["error"],
-    "newlines-between": "always", // spacing makes groups easier to parse
-    // alphabetic ordering makes stuff from same directories clump together
-    "alphabetize": {
-      "order": "asc"
-    }
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "jest": true,
+    "node": true
   },
-  "settings": {
-    "imports/resolver": {
-      "node": {
-        "paths": ["src"]
+  "rules": {
+    "jsx-a11y/href-no-hash": ["off"],
+    "react/jsx-filename-extension": [
+      "warn",
+      {
+        "extensions": [".js", ".jsx"]
       }
-    }
+    ],
+    "max-len": [
+      "warn",
+      {
+        "code": 80,
+        "tabWidth": 2,
+        "comments": 80,
+        "ignoreComments": false,
+        "ignoreTrailingComments": true,
+        "ignoreUrls": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true,
+        "ignoreRegExpLiterals": true
+      }
+    ]
   }
 }
