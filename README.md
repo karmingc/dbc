@@ -5,7 +5,7 @@ The website was built using React and deployed using Firebase.
 ## Official Dragon's Beard Candy website.
 Welcome to Dragon's Beard Candy's official website.
 
-After designing it and building it using Weebly in my early teenage years, I finally had the chance and redesign it from scratch, of course, this time, without using Weebly.
+After designing it and building it using Weebly in my early teenage years, I finally had the chance to redesign it from scratch, of course, this time, without using Weebly.
 
 ## Back to basics
 Redesigns are never easy - the most important notion is to understand what's the purpose of it all.
