@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import styled from '@emotion/styled';
 import { font } from 'style/text.js';
 import { layout } from 'style/layout.js';
@@ -35,7 +35,7 @@ const NavContainer = styled.div`
 
 const OptionsTitle = styled(Link)`
   font-size: ${font.size.small};
-  color: ${(props) => (props.option === 'true' ? 'black' : '#848484')};
+  color: ${props => (props.option === 'true' ? 'black' : '#848484')};
   margin-left: 45px;
   text-decoration: none;
   transition: color ease 0.5s;
@@ -51,62 +51,42 @@ const OptionsTitle = styled(Link)`
   }
 `;
 
-export default class Header extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      path: '/',
-    };
-  }
+const Header = () => {
+  const { pathname } = useLocation();
+  const [path, setPath] = useState(pathname);
 
-  componentDidMount() {
-    // sets initial path
-    this.setState({
-      path: window.location.pathname,
-    });
-  }
-
-  navChoose = (option) => {
+  const setLocationPath = option => {
     let result = option === 'Home' ? '/' : '/' + option;
-    this.setState({
-      path: result,
-    });
+    setPath(result);
   };
 
-  render() {
-    const options = ['Home', 'About', 'Menu', 'Contact'];
-    return (
-      <Container>
-        <HeaderTitle
-          to="/"
-          onClick={() => {
-            this.navChoose('Home');
-          }}
-        >
-          Dragon's Beard Candy
-        </HeaderTitle>
-        <NavContainer>
-          {options.map((d) => {
-            return (
-              <OptionsTitle
-                option={
-                  this.state.path === '/' + d
-                    ? 'true'
-                    : this.state.path === '/' && d === 'Home'
-                    ? 'true'
-                    : 'false'
-                }
-                to={d === 'Home' ? '/' : '/' + d}
-                onClick={() => {
-                  this.navChoose(d);
-                }}
-              >
-                {d}
-              </OptionsTitle>
-            );
-          })}
-        </NavContainer>
-      </Container>
-    );
-  }
-}
+  const options = ['Home', 'About', 'Menu', 'Contact'];
+
+  return (
+    <Container>
+      <HeaderTitle
+        to="/"
+        onClick={() => {
+          setLocationPath('Home');
+        }}>
+        Dragon's Beard Candy
+      </HeaderTitle>
+      <NavContainer>
+        {options.map(d => {
+          return (
+            <OptionsTitle
+              key={d}
+              option={path === '/' + d ? 'true' : path === '/' && d === 'Home' ? 'true' : 'false'}
+              to={d === 'Home' ? '/' : '/' + d}
+              onClick={() => {
+                setLocationPath(d);
+              }}>
+              {d}
+            </OptionsTitle>
+          );
+        })}
+      </NavContainer>
+    </Container>
+  );
+};
+export default Header;
